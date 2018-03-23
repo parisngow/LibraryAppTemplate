@@ -28,9 +28,19 @@ public class Library {
      * this.members is then replaced by the new array.
      *
      * @param member
-     *          A new member object to add to the members list
+     *          A new member object to add to the members list, 
      */
-
+    void addMember(Member[] members){
+        Member[] temparray = new Member[this.members.length - 1];
+        for (int i = 0; i < temparray.length; i++){
+            if (i < this.members.length){
+                temparray[i] = this.members[i];
+            } else {
+                temparray[i] = members;
+            }
+        }
+        this.members = temparray;
+    }
 
 
 
