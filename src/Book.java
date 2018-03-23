@@ -23,8 +23,6 @@ public class Book {
         }
     }
 
-
-
     /**
      * toString() : String
      * Returns all this.pages values as one long string.
@@ -43,5 +41,4 @@ public class Book {
 
         return allPages;
     }
-
 }
