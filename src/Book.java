@@ -2,7 +2,9 @@
  * Book class
  */
 public class Book {
-
+    String title;
+    String author;
+    String[] pages;
 
     /**
      * censorPage(int) : void
@@ -13,10 +15,13 @@ public class Book {
      *          The index of the page to be 'censored'
      *
      */
-
-
-
-
+    public void censorPage(int pageNumber) {
+        for (int i = 0; i < pages.length; i++) {
+            if (i == pageNumber) {
+                pages[i] = "-";
+            }
+        }
+    }
 
 
 
@@ -29,8 +34,14 @@ public class Book {
      *          E.g. if this.pages = { "a", "b", "c" };
      *          the method returns "abc".
      */
+    public String toString() {
+        String allPages = "";
 
+        for (int x = 0; x < pages.length; x++) {
+            allPages += pages[x];
+        }
 
-
+        return allPages;
+    }
 
 }
